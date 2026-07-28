@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ site.title }} | {{ site.affiliation }}</title>
+    <meta name="description" content="{{ site.description }}">
+    <meta name="keywords" content="{{ site.keywords }}">
+    <link rel="canonical" href="{{ site.canonical }}">
+    <link rel="icon" href="data:,">
+    <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        {% if site.avatar %}
+        <span class="image avatar">
+          <img
+            src="{{ site.avatar | relative_url }}"
+            alt="Yuntian Zhao at the Grand Canyon"
+            width="512"
+            height="512"
+            decoding="async"
+            fetchpriority="high">
+        </span>
+        {% endif %}
+
+        <h1>{{ site.title }}</h1>
+
+        {% if site.position %}
+        <p class="position">{{ site.position }}</p>
+        {% endif %}
+
+        {% if site.affiliation %}
+        <p class="affiliation">
+          {% if site.affiliation_link %}
+          <a href="{{ site.affiliation_link }}" rel="noopener">{{ site.affiliation }}</a>
+          {% else %}
+          {{ site.affiliation }}
+          {% endif %}
+        </p>
+        {% endif %}
+
+        {% if site.email %}
+        <p class="email"><a href="mailto:{{ site.email }}">{{ site.email }}</a></p>
+        {% endif %}
+
+        {% if site.github_link %}
+        <nav class="social-links" aria-label="Profile links">
+          <a href="{{ site.github_link }}" aria-label="GitHub profile" rel="me noopener">
+            <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+              <path fill="currentColor" d="M12 .7a11.5 11.5 0 0 0-3.6 22.4c.6.1.8-.3.8-.6v-2.2c-3.4.7-4.1-1.4-4.1-1.4-.5-1.4-1.3-1.8-1.3-1.8-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1.1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.4 11.4 0 0 1 6 0C16.9 4.6 18 4.9 18 4.9c.6 1.7.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.2c0 .4.2.7.8.6A11.5 11.5 0 0 0 12 .7Z"/>
+            </svg>
+          </a>
+        </nav>
+        {% endif %}
+      </header>
+
+      <main>
+        {{ content }}
+
+        {% if site.enable_footnote %}
+        <p class="footnote"><small>Powered by Jekyll and the <a href="https://github.com/yaoyao-liu/minimal-light" rel="noopener">Minimal Light</a> theme.</small></p>
+        {% endif %}
+      </main>
+    </div>
+  </body>
+</html>
