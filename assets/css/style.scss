@@ -1,0 +1,140 @@
+---
+---
+
+@import "minimal-light";
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #fff;
+  color: #4b4b4b;
+  font: 17px/1.55 Georgia, "Times New Roman", Times, serif;
+}
+
+.position,
+.affiliation,
+.email {
+  margin: 0 0 0.25rem;
+}
+
+.position {
+  font-size: 1.05rem;
+}
+
+.email {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 0.78rem;
+  overflow-wrap: anywhere;
+}
+
+.social-links {
+  margin-top: 1rem;
+}
+
+.social-links a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  color: #043361;
+  border-radius: 50%;
+  transition: transform 0.15s ease;
+}
+
+.social-links a:hover {
+  color: #069;
+  transform: scale(1.08);
+}
+
+.image.avatar img {
+  box-sizing: border-box;
+  width: 160px;
+  height: 160px;
+  padding: 0;
+  object-fit: cover;
+}
+
+main {
+  width: 650px;
+  float: right;
+  padding-top: 4rem;
+  padding-bottom: 50px;
+}
+
+main > h2:not(:first-child) {
+  margin-top: 2rem;
+}
+
+.paper-list {
+  padding-left: 1.25rem;
+}
+
+.paper-list li {
+  margin-bottom: 1rem;
+}
+
+.paper-title,
+.paper-authors,
+.paper-note,
+.paper-venue {
+  display: block;
+}
+
+.paper-title {
+  font-weight: 600;
+}
+
+.paper-authors,
+.paper-note,
+.paper-venue {
+  margin-top: 0.1rem;
+}
+
+.footnote {
+  margin-top: 3rem;
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background: #20212b;
+    color: #dadbdf;
+  }
+
+  .social-links a {
+    color: #3eb7f0;
+  }
+
+  .social-links a:hover {
+    color: #a8e4ff;
+  }
+}
+
+@media print, screen and (max-width: 960px) {
+  body {
+    padding: 15px;
+  }
+
+  main {
+    float: none;
+    width: auto;
+    padding: 20px 0;
+    border: 1px solid rgba(127, 127, 127, 0.25);
+    border-width: 1px 0;
+  }
+
+  .image.avatar img {
+    width: 128px;
+    height: 128px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .social-links a {
+    transition: none;
+  }
+
+  .social-links a:hover {
+    transform: none;
+  }
+}
