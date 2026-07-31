@@ -15,13 +15,27 @@
       <header>
         {% if site.avatar %}
         <span class="image avatar">
-          <img
-            src="{{ site.avatar | relative_url }}"
-            alt="Yuntian Zhao at the Grand Canyon"
-            width="512"
-            height="512"
-            decoding="async"
-            fetchpriority="high">
+          <a
+            class="avatar-link"
+            href="{{ site.avatar | relative_url }}"
+            aria-label="Open full-size portrait of Yuntian Zhao">
+            <picture>
+              <source
+                type="image/webp"
+                srcset="
+                  {{ '/assets/img/portrait-224.webp' | relative_url }} 224w,
+                  {{ '/assets/img/portrait-320.webp' | relative_url }} 320w,
+                  {{ '/assets/img/portrait-448.webp' | relative_url }} 448w"
+                sizes="(max-width: 960px) 128px, 160px">
+              <img
+                src="{{ site.avatar | relative_url }}"
+                alt="Yuntian Zhao at the Grand Canyon"
+                width="512"
+                height="512"
+                decoding="async"
+                fetchpriority="high">
+            </picture>
+          </a>
         </span>
         {% endif %}
 
