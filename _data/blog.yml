@@ -5,4 +5,7 @@
 #     date: 2026-07-30
 #     file: /assets/blog/example-post.pdf
 
-posts: []
+posts:
+  - title: "How to Pass the QE?"
+    date: 2026-07-30
+    file: /assets/blog/how-to-pass-the-qe.md
