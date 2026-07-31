@@ -11,19 +11,18 @@ html {
 h1,
 h2,
 h3 {
+  color: var(--color-accent);
   line-height: 1.15;
 }
 
 h1 {
   margin: 0 0 1rem;
-  color: #043361;
   font-size: 1.75rem;
   font-weight: 500;
 }
 
 h2 {
   margin: 0 0 0.9rem;
-  color: #043361;
   font-size: 1.55rem;
   font-weight: 500;
 }
@@ -35,12 +34,12 @@ ol {
 }
 
 a {
-  color: #1769aa;
+  color: var(--color-accent);
   text-decoration: none;
 }
 
 a:hover {
-  color: #004f85;
+  color: var(--color-hover);
   text-decoration: underline;
   text-underline-offset: 0.16em;
 }
@@ -78,21 +77,6 @@ header {
 
 small {
   font-size: 0.75rem;
-}
-
-@media (prefers-color-scheme: dark) {
-  h1,
-  h2 {
-    color: #69c9f2;
-  }
-
-  a {
-    color: #69c9f2;
-  }
-
-  a:hover {
-    color: #a8e4ff;
-  }
 }
 
 @media print, screen and (max-width: 960px) {
