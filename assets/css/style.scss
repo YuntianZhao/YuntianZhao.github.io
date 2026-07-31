@@ -50,6 +50,17 @@ body {
   transform: scale(1.08);
 }
 
+.avatar-link {
+  display: inline-block;
+  border-radius: 50%;
+  line-height: 0;
+  cursor: zoom-in;
+}
+
+.avatar-link:focus-visible {
+  border-radius: 50%;
+}
+
 .image.avatar img {
   box-sizing: border-box;
   width: 160px;
