@@ -35,13 +35,12 @@ ol {
 
 a {
   color: var(--color-accent);
-  text-decoration: none;
+  text-decoration: underline;
+  text-underline-offset: 0.16em;
 }
 
 a:hover {
   color: var(--color-hover);
-  text-decoration: underline;
-  text-underline-offset: 0.16em;
 }
 
 a:focus-visible {

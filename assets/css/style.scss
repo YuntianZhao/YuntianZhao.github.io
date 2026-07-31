@@ -50,6 +50,7 @@ body {
   height: 2.25rem;
   color: var(--color-accent);
   border-radius: 50%;
+  text-decoration: none;
   transition: transform 0.15s ease;
 }
 
@@ -63,6 +64,7 @@ body {
   border-radius: 50%;
   line-height: 0;
   cursor: zoom-in;
+  text-decoration: none;
 }
 
 .avatar-link:focus-visible {
