@@ -17,3 +17,5 @@ I am a PhD student in Economics at NYU Stern School of Business. My research int
 {% include publications.md %}
 
 ## Service
+
+{% include blog.md %}

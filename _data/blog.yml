@@ -1,0 +1,8 @@
+# Add blog entries here. The page displays them newest first.
+#
+# posts:
+#   - title: "Example post"
+#     date: 2026-07-30
+#     file: /assets/blog/example-post.pdf
+
+posts: []
