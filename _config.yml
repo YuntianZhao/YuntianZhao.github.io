@@ -13,7 +13,7 @@ keywords: Yuntian Zhao, NYU Stern, economics, macroeconomics, international econ
 github_link: https://github.com/YuntianZhao
 avatar: /assets/img/portrait.jpg
 
-enable_footnote: true
+enable_footnote: false
 
 sass:
   sass_dir: _sass
