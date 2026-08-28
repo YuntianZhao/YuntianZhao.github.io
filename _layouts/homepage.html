@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>{{ site.title }} | {{ site.affiliation }}</title>
+    <title>{{ site.title }} | {{ site.affiliation_short }}</title>
     <meta name="description" content="{{ site.description }}">
     <meta name="keywords" content="{{ site.keywords }}">
     <link rel="canonical" href="{{ site.canonical }}">
@@ -40,7 +40,11 @@
         </span>
         {% endif %}
 
-        <h1>{{ site.title }}</h1>
+        <h1{% if site.chinese_name %} class="has-chinese-name"{% endif %}>{{ site.title }}</h1>
+
+        {% if site.chinese_name %}
+        <p class="chinese-name" lang="zh-Hans">{{ site.chinese_name }}</p>
+        {% endif %}
 
         {% if site.position %}
         <p class="position">{{ site.position }}</p>

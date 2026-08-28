@@ -18,6 +18,18 @@ body {
   line-height: 1.55;
 }
 
+h1.has-chinese-name {
+  margin-bottom: 0.25rem;
+}
+
+.chinese-name {
+  margin: 0 0 1rem;
+  color: var(--color-accent);
+  font-size: 1.15rem;
+  font-weight: 400;
+  line-height: 1.15;
+}
+
 .position,
 .affiliation,
 .email {
