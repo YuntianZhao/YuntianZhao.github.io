@@ -14,7 +14,7 @@ I am a PhD student in Economics at NYU Stern School of Business. My research int
 
 ## News
 
-- **October 12, 2026:** Posted our new working paper, [Tax Productivity and Economic Development: A Quantitative Macroeconomic Analysis](/assets/papers/Tax_Productivity_20261012.pdf). We study how governments' ability to collect taxes shapes economic development using a new macro-historical database and a quantitative growth model.
+- **October 12, 2026:** New working paper: [Tax Productivity and Economic Development: A Quantitative Macroeconomic Analysis](/assets/papers/Tax_Productivity_20261012.pdf).
 
 {% include publications.md %}
 
