@@ -1,2 +1,15 @@
-working_papers: []
+working_papers:
+  - title: "Tax Productivity and Economic Development: A Quantitative Macroeconomic Analysis"
+    url: /assets/papers/Tax_Productivity_20261012.pdf
+    authors:
+      - name: Radhika Goyal
+        url: https://sites.google.com/view/radhika-goyal/home
+      - name: Anders Jensen
+        url: https://www.andersditlevjensen.com/research.html
+      - name: David Lagakos
+        url: https://davidlagakos.io
+      - name: Abdoulaye Ndiaye
+        url: https://www.abdoulayendiaye.com
+      - name: Yuntian Zhao
+    note: October 2026
 publications: []

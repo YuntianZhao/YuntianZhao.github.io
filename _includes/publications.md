@@ -9,7 +9,7 @@
     {% else %}
     <span class="paper-title">{{ paper.title }}</span>
     {% endif %}
-    {% if paper.authors %}<span class="paper-authors">{{ paper.authors }}</span>{% endif %}
+    {% if paper.authors %}<span class="paper-authors">{% for author in paper.authors %}{% unless forloop.first %}, {% endunless %}{% if author.url %}<a href="{{ author.url }}" rel="noopener">{{ author.name }}</a>{% else %}{{ author.name }}{% endif %}{% endfor %}</span>{% endif %}
     {% if paper.note %}<span class="paper-note">{{ paper.note }}</span>{% endif %}
   </li>
   {% endfor %}
@@ -26,7 +26,7 @@
     {% else %}
     <span class="paper-title">{{ paper.title }}</span>
     {% endif %}
-    {% if paper.authors %}<span class="paper-authors">{{ paper.authors }}</span>{% endif %}
+    {% if paper.authors %}<span class="paper-authors">{% for author in paper.authors %}{% unless forloop.first %}, {% endunless %}{% if author.url %}<a href="{{ author.url }}" rel="noopener">{{ author.name }}</a>{% else %}{{ author.name }}{% endif %}{% endfor %}</span>{% endif %}
     {% if paper.venue %}<span class="paper-venue">{{ paper.venue }}</span>{% endif %}
   </li>
   {% endfor %}
