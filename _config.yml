@@ -8,6 +8,7 @@ email: yuntian.zhao@nyu.edu
 
 url: https://yuntianzhao.github.io
 baseurl: ""
+timezone: America/New_York
 canonical: https://yuntianzhao.github.io/
 description: Yuntian Zhao is a PhD student in Economics at NYU Stern School of Business with research interests in macroeconomics, international economics, and computational economics.
 keywords: Yuntian Zhao, NYU Stern, economics, macroeconomics, international economics, computational economics
@@ -23,8 +24,10 @@ sass:
   style: compressed
 
 exclude:
+  - AGENTS.md
   - Gemfile
   - Gemfile.lock
   - LICENSE
   - README.md
+  - scripts/
   - vendor/

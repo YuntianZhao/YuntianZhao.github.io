@@ -1,0 +1,49 @@
+name: Site maintenance
+
+"on":
+  schedule:
+    - cron: "23 11 * * *"
+  workflow_dispatch:
+  push:
+    branches: [master]
+    paths:
+      - _data/news.yml
+      - _data/publications.yml
+      - _includes/news.md
+      - scripts/**
+      - .github/workflows/site-maintenance.yml
+
+permissions:
+  contents: read
+
+jobs:
+  check-content:
+    name: Check news dates and coauthor links
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          persist-credentials: false
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: "3.3"
+      - name: Install template test dependency
+        run: gem install liquid --version 4.0.4 --no-document
+      - name: Test news expiry and link checking
+        run: ruby scripts/test_site_maintenance.rb
+      - name: Check coauthor homepages
+        run: ruby scripts/check_coauthor_links.rb
+
+  refresh-news:
+    name: Rebuild Pages to expire news
+    if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    permissions:
+      pages: write
+    steps:
+      - name: Request a GitHub Pages rebuild
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh api --method POST "repos/$GITHUB_REPOSITORY/pages/builds" --silent

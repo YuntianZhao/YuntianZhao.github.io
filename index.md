@@ -12,9 +12,7 @@ I am a PhD student in Economics at NYU Stern School of Business. My research int
 - International Economics
 - Computational Economics
 
-## News
-
-- **October 12, 2026:** New working paper: [Tax Productivity and Economic Development: A Quantitative Macroeconomic Analysis](/assets/papers/Tax_Productivity_20261012.pdf).
+{% include news.md %}
 
 {% include publications.md %}
 
