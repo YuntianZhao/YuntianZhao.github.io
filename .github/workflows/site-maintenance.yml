@@ -28,8 +28,10 @@ jobs:
       - uses: ruby/setup-ruby@v1
         with:
           ruby-version: "3.3"
-      - name: Install template test dependency
-        run: gem install liquid --version 4.0.4 --no-document
+      - name: Install template test dependencies
+        run: |
+          gem install liquid --version 4.0.4 --no-document
+          gem install kramdown --version 2.4.0 --no-document
       - name: Test news expiry and link checking
         run: ruby scripts/test_site_maintenance.rb
       - name: Check coauthor homepages

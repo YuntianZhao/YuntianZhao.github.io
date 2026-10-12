@@ -11,10 +11,12 @@ These preferences apply when updating Yuntian Zhao's academic website.
 
 ## News announcements
 
+- Store each announcement's complete wording in the `text` field of `_data/news.yml`, as one concise paragraph with optional Markdown links and emphasis. The template renders the wording without adding an announcement type or fixed phrase.
+- Use this format for working papers, journal publications, conferences, awards, and other news. Describe only events and details supplied or verified for the user.
 - Keep a new working paper announcement to the posting date and linked paper title:
   `October 12, 2026: New working paper: [Paper title](PDF URL).`
 - Add a description of the research, methods, or findings only when the user explicitly requests it.
-- Store announcements in `_data/news.yml` with a posting date and an expiry date one calendar month later. Expired announcements leave the News section; their papers remain under Working Papers.
+- Give each announcement a posting date and expiry date. Default to one calendar month; use an expiry appropriate to the event when specified, such as the day after a conference ends. Expired announcements leave the News section; research listings and PDFs remain available.
 
 ## Maintenance
 

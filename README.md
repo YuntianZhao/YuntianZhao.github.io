@@ -6,7 +6,7 @@ Personal academic website built with Jekyll and adapted from the
 Content is maintained in:
 
 - `index.md` for the biography, research interests, and service
-- `_data/news.yml` for dated working-paper announcements and expiry dates
+- `_data/news.yml` for announcement wording, posting dates, and expiry dates
 - `_data/publications.yml` for working papers and publications
 - `_data/blog.yml` for blog titles, dates, and file links
 - `assets/blog/` for Markdown and PDF blog files
@@ -45,17 +45,38 @@ workflow to `master` to activate it.
   display only unexpired announcements, with the newest first. If none remain,
   the News heading also disappears. Working Papers and their PDFs stay listed.
 
-To announce another paper, add an entry to `_data/news.yml`:
+Add any announcement to `_data/news.yml`. Its complete wording belongs in
+`text`, as one concise paragraph; Markdown links and emphasis are supported.
+The template supplies the posting date and expiry filtering. These are examples
+of the supported formats, not additional announcements on the website:
 
 ```yml
 - date: "2026-10-12"
   expires: "2026-11-12"
-  title: "Paper title"
-  url: /assets/papers/paper.pdf
+  text: >-
+    New working paper: [Paper title](/assets/papers/paper.pdf).
+
+- date: "2026-10-20"
+  expires: "2026-11-20"
+  text: >-
+    [Paper title](https://example.org/article) has been published in *Journal Name*.
+
+- date: "2026-10-15"
+  expires: "2026-10-26"
+  text: >-
+    I will present at [Conference name](https://example.org/conference) on October 25.
+
+- date: "2026-10-20"
+  expires: "2026-11-20"
+  text: "I received a research award."
 ```
 
-Set `expires` to one calendar month after `date`, using the last valid day of
-the next month when necessary. The announcement is visible from `date` through
+Default `expires` to one calendar month after `date`, using the last valid day
+of the next month when necessary. Set a different expiry when it better fits
+the announcement: an upcoming conference can remain visible until it ends.
+Links are optional and can point to local PDFs or external journal and event
+pages. Adding news does not change the separate working-paper/publication list.
+The announcement is visible from `date` through
 the day before `expires`. It disappears after the first rebuild on or after
 the expiry date. Scheduled runs can be delayed, so expiry is daily rather than
 an exact midnight timer. Expired entries can remain in the data file as a record.
@@ -67,6 +88,7 @@ immediately. GitHub documents this behavior under
 [scheduled workflows](https://docs.github.com/en/actions/reference/workflows-and-actions/events-that-trigger-workflows#schedule).
 
 Run the link checks locally with `ruby scripts/check_coauthor_links.rb`. Template
-tests need Liquid 4.0.4, supplied by the site's GitHub Pages bundle, and run with
+tests need Liquid 4.0.4 and Kramdown 2.4.0, supplied by the site's GitHub Pages
+bundle, and run with
 `bundle exec ruby scripts/test_site_maintenance.rb`. The workflow installs its
-test dependency independently of the website's build.
+test dependencies independently of the website's build.

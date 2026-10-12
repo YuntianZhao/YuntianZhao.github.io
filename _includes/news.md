@@ -5,7 +5,8 @@
   {%- assign published_on = item.date | date: "%Y-%m-%d" -%}
   {%- assign expires_on = item.expires | date: "%Y-%m-%d" -%}
   {%- if published_on <= today and today < expires_on -%}
-<li><strong>{{ item.date | date: "%B %-d, %Y" }}:</strong> New working paper: <a href="{{ item.url | relative_url }}">{{ item.title | escape }}</a>.</li>
+    {%- assign announcement = item.text | markdownify | strip -%}
+<li><strong>{{ item.date | date: "%B %-d, %Y" }}:</strong> {{ announcement | remove: '<p>' | remove: '</p>' }}</li>
   {%- endif -%}
 {%- endfor -%}
 {%- endcapture -%}
