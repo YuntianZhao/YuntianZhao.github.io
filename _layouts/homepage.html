@@ -64,7 +64,7 @@
         <p class="email"><a href="mailto:{{ site.email }}">{{ site.email }}</a></p>
         {% endif %}
 
-        {% if site.github_link or site.linkedin_link %}
+        {% if site.github_link or site.linkedin_link or site.google_scholar_link %}
         <nav class="social-links" aria-label="Profile links">
           {% if site.github_link %}
           <a href="{{ site.github_link }}" aria-label="GitHub profile" rel="me noopener">
@@ -77,6 +77,13 @@
           <a href="{{ site.linkedin_link }}" aria-label="LinkedIn profile" rel="me noopener">
             <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
               <path fill="currentColor" d="M20.45 2H3.55C2.69 2 2 2.68 2 3.52v16.96c0 .84.69 1.52 1.55 1.52h16.9c.86 0 1.55-.68 1.55-1.52V3.52c0-.84-.69-1.52-1.55-1.52ZM7.93 18.75H4.98V9.2h2.95v9.55ZM6.45 7.9a1.71 1.71 0 1 1 0-3.42 1.71 1.71 0 0 1 0 3.42Zm12.3 10.85H15.8v-4.64c0-1.11-.02-2.54-1.55-2.54-1.55 0-1.79 1.21-1.79 2.46v4.72H9.51V9.2h2.83v1.3h.04c.4-.75 1.36-1.55 2.79-1.55 2.98 0 3.58 1.96 3.58 4.5v5.3Z"/>
+            </svg>
+          </a>
+          {% endif %}
+          {% if site.google_scholar_link %}
+          <a href="{{ site.google_scholar_link | escape }}" aria-label="Google Scholar profile" rel="me noopener">
+            <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+              <path fill="currentColor" d="M12 24a7 7 0 1 1 0-14 7 7 0 0 1 0 14ZM12 0 0 9.5l4.838 3.94A8 8 0 0 1 12 9a8 8 0 0 1 7.162 4.44L24 9.5Z"/>
             </svg>
           </a>
           {% endif %}
