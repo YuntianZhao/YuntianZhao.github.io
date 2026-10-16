@@ -6,12 +6,6 @@ layout: homepage
 
 I am a PhD student in Economics at NYU Stern School of Business. My research interests lie in macroeconomics and international economics, with an emphasis on computational approaches.
 
-## Research Interests
-
-- Macroeconomics
-- International Economics
-- Computational Economics
-
 {% include news.md %}
 
 {% include publications.md %}

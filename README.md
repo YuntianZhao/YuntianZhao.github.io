@@ -5,7 +5,7 @@ Personal academic website built with Jekyll and adapted from the
 
 Content is maintained in:
 
-- `index.md` for the biography, research interests, and service
+- `index.md` for the biography and service
 - `_data/news.yml` for announcement wording, posting dates, and expiry dates
 - `_data/publications.yml` for working papers and publications
 - `_data/blog.yml` for blog titles, dates, and file links
