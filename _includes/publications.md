@@ -11,6 +11,7 @@
     {% endif %}
     {% if paper.authors %}<span class="paper-authors">{% for author in paper.authors %}{% unless forloop.first %}, {% endunless %}{% if author.url %}<a href="{{ author.url }}" rel="noopener">{{ author.name }}</a>{% else %}{{ author.name }}{% endif %}{% endfor %}</span>{% endif %}
     {% if paper.note %}<span class="paper-note">{{ paper.note }}</span>{% endif %}
+    {% if paper.links %}<span class="paper-note">{% for link in paper.links %}{% unless forloop.first %} · {% endunless %}<a href="{{ link.url | escape }}" rel="noopener">{{ link.label | escape }}</a>{% endfor %}</span>{% endif %}
   </li>
   {% endfor %}
 </ol>
@@ -28,6 +29,7 @@
     {% endif %}
     {% if paper.authors %}<span class="paper-authors">{% for author in paper.authors %}{% unless forloop.first %}, {% endunless %}{% if author.url %}<a href="{{ author.url }}" rel="noopener">{{ author.name }}</a>{% else %}{{ author.name }}{% endif %}{% endfor %}</span>{% endif %}
     {% if paper.venue %}<span class="paper-venue">{{ paper.venue }}</span>{% endif %}
+    {% if paper.links %}<span class="paper-note">{% for link in paper.links %}{% unless forloop.first %} · {% endunless %}<a href="{{ link.url | escape }}" rel="noopener">{{ link.label | escape }}</a>{% endfor %}</span>{% endif %}
   </li>
   {% endfor %}
 </ol>

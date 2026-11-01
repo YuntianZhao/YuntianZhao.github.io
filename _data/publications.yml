@@ -1,6 +1,9 @@
 working_papers:
   - title: "Tax Productivity and Economic Development: A Quantitative Macroeconomic Analysis"
     url: /assets/papers/Tax_Productivity_20261012.pdf
+    links:
+      - label: NBER Working Paper 35934
+        url: https://www.nber.org/papers/w35934
     authors:
       - name: Radhika Goyal
         url: https://sites.google.com/view/radhika-goyal/
